@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    padding: 5px 5%;
+    background-image: url('../img/bd1.jpg');
+    background-size: 100%;
+    color: white;
+    font: 12pt 'Verdana';
+}
+
+Header>h1 {
+    color: blue;
+    text-shadow: 2px 2px white;
+    font-size: 48pt;
+}
+
+nav {
+    padding: 5px;
+}
+
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+header {
+    padding-top: 50px;
+}
