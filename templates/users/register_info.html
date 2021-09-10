@@ -1,0 +1,18 @@
+{% extends 'base/master.html' %}
+
+{% block title %}Звіт по реістрації{% endblock %}
+
+{% block content %}
+<div class="main-box">
+    <h2>Звіт по реєстрації</h2>
+    <hr>
+    <div class="info-box" style="background-color: whitesmoke; padding: 20px; color: navy">
+        Ви успішно або не успішно зареєструвались...
+        <br>
+        {{ context['login'] }} <br>
+        {{ context['pass1'] }} <br>
+        {{ context['pass2'] }} <br>
+        {{ context['email'] }} <br>
+    </div>
+</div>
+{% endblock %}
