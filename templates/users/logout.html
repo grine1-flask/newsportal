@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base/master.html' %}
 
-</body>
-</html>
+{% block title %}Вихід{% endblock %}
+
+{% block content %}
+<div class="main-box">
+    <h2>Вихід</h2>
+    <hr>
+    <div class="info-box">
+       Ви успішно вийшли з системи!
+        <br>
+    </div>
+</div>
+{% endblock %}

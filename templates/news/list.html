@@ -5,5 +5,39 @@
 {% block content %}
 <div class="main-box">
     <h2>Лента новин</h2>
+    {% if 'user' in session and session['user'] == 'admin' %}
+            <a href="/news/create">Добавити новину</a>
+    {% endif %}
+    <tabel id="new_table" border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>About</th>
+                <th>Content</th>
+                <th>Image</th>
+                <th>Publish</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in context.all_news %}
+            <tr>
+                <td>{{ article[0] }}</td>
+                <td>{{ article[1] }}</td>
+                <td>{{ article[2] }}</td>
+                <td>{{ article[3] }}</td>
+                <td>
+                    <img class='logo' src="{{ url_for('static', filename={{article[4]}}) }}" alt="Failed">
+                </td>
+                <td>{{ article[5] }}</td>
+                <td>{{ article[7] }}</td>
+            </tr>
+            {% endfor  %}
+        </tbody>
+
+
+
+    </tabel>
 </div>
 {% endblock %}
